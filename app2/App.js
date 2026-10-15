@@ -12,7 +12,28 @@ export default function App() {
       <Image source={require('./assets/favicon.png')} />
       <Saludo />
       <Saludo2 />
-      <Perfil />
+      <Perfil 
+      nombre= "Miguel Angel Zamora Bocanegra" 
+      carrera= "TIID"
+      materia="Movil"
+      cuatri="4to"> 
+        </Perfil>
+        
+        <Perfil 
+      nombre= "Ashly Angeles " 
+      carrera= "Mecatronica"
+      materia="Movil"
+      cuatri="4to"> 
+        </Perfil>
+
+      <Perfil 
+      nombre= "Paloma Valeria" 
+      carrera= "TIID"
+      materia="Movil"
+      cuatri="4to"> 
+        </Perfil>
+        
+        
       <StatusBar style="auto" />
     </View>
   );
