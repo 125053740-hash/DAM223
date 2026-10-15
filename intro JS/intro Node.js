@@ -8,4 +8,4 @@ console.log((edad1 + edadb2) / 2);
 console.log("Medidor de Procesos");
 console.time("mi proceso");
 for (let i=0 ; i<100000000 ; i++){}
-console.timeEnd("mi proceso");
+console.timeEnd("mi proceso");  
