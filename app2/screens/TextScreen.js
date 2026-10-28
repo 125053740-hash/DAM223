@@ -5,8 +5,8 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 export default function TextScreen() {
   return (
     <View style={styles.container}>  
-    <text>Aqui va la practica</text>
-      <text>Equipo de </text>  
+    <Text>Aqui va la practica</Text>
+      <Text>Equipo de </Text>
       
       
       

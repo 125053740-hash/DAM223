@@ -6,8 +6,8 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 export default function PressableScreen() {
   return (
     <View style={styles.container}>    
-      <text>Aqui va la practica 11</text>
-      <text>Equipo de Karen</text>
+      <Text>Aqui va la practica 11</Text>
+      <Text>Equipo de Karen</Text>
       
       
         

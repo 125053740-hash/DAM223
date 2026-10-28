@@ -4,7 +4,11 @@ import {useState} from 'react';
 import SafeScreen from './SafeScreen';
 import PressableScreen from './PressableScreen';
 import TarjetasScreen from './TarjetasScreen';  
-
+import ActivityScreen from './ActivityScreen';
+import FlatScreen from './FlatScreen';
+import ImageScreen from './ImageScreen';
+import ModalScreen from './ModalScreen';
+import TextScreen from './TextScreen';
 
 
 export default function MenuScreen() {
@@ -14,13 +18,13 @@ export default function MenuScreen() {
             return <SafeScreen/>;
             case 'press':
             return <PressableScreen/>;
-             case 'tajetas':
+             case 'tarjetas':
             return <TarjetasScreen/>;
-            case 'Activity':
+             case 'activity':
             return <ActivityScreen/>;
-            case 'Flat':
+             case 'flat':
             return <FlatScreen/>;
-            case 'Image':
+             case 'image':
             return <ImageScreen/>;
             case 'modal':
             return <ModalScreen/>;
