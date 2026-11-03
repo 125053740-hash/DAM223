@@ -19,32 +19,37 @@ export default function TextInputScreen() {
 
   const registrar = () => {
     const faltantes = [];
-    if(nombre.trim ===''){
+    if(nombre.trim() === ''){
       faltantes.push('nombre')
     }
-    if(correo.trim ===''){
+    if(correo.trim() === ''){
       faltantes.push('correo')
     }
-    if(telefono.trim ===''){
+    if(telefono.trim() === ''){
       faltantes.push('telefono')
     }
     if(faltantes.length > 0) {
-      mostrarAlerta('Correo no valido','El correo debe tener el formato correcto')
-      
-
+      mostrarAlerta('Faltan datos', `Completa: ${faltantes.join(', ')}`)
+      return;
     }
+
     if(!correo.includes('@')){
-            mostrarAlerta('Faltan datos','Completa' +faltantes.join(','))
-            if(telefono.length!== 10){
-              mostrarAlerta('telefono invalido','Debe tener 10 digitos')
-              return;
-            }
-      mostrarAlerta('Datos registrados correctamente','Nombre:${nombre} \n  Correo:$(correo) \n Telefono:$(telefono)');
-            setNombre('');
-            setCorreo('');
-            setTelefono('');
-
+      mostrarAlerta('Correo no valido', 'El correo debe tener el formato correcto')
+      return;
     }
+
+    if(!/^\d{10}$/.test(telefono)){
+      mostrarAlerta('Telefono invalido', 'Debe tener 10 digitos')
+      return;
+    }
+
+    mostrarAlerta(
+      'Datos registrados correctamente',
+      `Nombre: ${nombre}\nCorreo: ${correo}\nTelefono: ${telefono}`
+    );
+    setNombre('');
+    setCorreo('');
+    setTelefono('');
   }
   return (
     <View style={styles.container}>  
@@ -115,3 +120,4 @@ const styles = StyleSheet.create({
 }
 
 );
+ 
